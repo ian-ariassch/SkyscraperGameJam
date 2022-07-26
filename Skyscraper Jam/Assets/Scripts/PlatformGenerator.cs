@@ -5,13 +5,14 @@ using UnityEngine;
 public class PlatformGenerator : MonoBehaviour
 {
 
+    public EnemiesSpawner _enemiesSpawner;
     public int buildingHeight = 1;
     public int platformsPerLevel = 2;
     public float heightBetweenLevels = 5f;
     public float xRange = 7f;
     public GameObject platform;
     public GameObject platformParents;
-    
+    public List<GameObject> platformsList;
     private float platformX, lastPlatformPos = 0f;
 
     private float yRange = 0.5f;
@@ -33,10 +34,13 @@ public class PlatformGenerator : MonoBehaviour
                 }while(checkIfTooClose(takenPositions, platformX));
                 Vector3 position = new Vector3(platformX, i*heightBetweenLevels+randomYOffset, 0);
                 takenPositions.Add(platformX, true);
-                Instantiate(platform, position, Quaternion.identity,platformParents.transform);
+                GameObject tempPlatform = Instantiate(platform, position, Quaternion.identity,platformParents.transform);
+                platformsList.Add(tempPlatform);
             }
             iterations = 0;
         }
+        _enemiesSpawner.spawnEnemies();
+
     }
 
     // Update is called once per frame
