@@ -6,6 +6,7 @@ public class PlatformGenerator : MonoBehaviour
 {
 
     public EnemiesSpawner _enemiesSpawner;
+    public BuildingGenerator _buildingGenerator;
     public int buildingHeight = 1;
     public int platformsPerLevel = 2;
     public float heightBetweenLevels = 5f;
@@ -40,6 +41,7 @@ public class PlatformGenerator : MonoBehaviour
             iterations = 0;
         }
         _enemiesSpawner.spawnEnemies();
+        _buildingGenerator.generateBuilding(platformsList[platformsList.Count-1].transform.position.y);
 
     }
 
