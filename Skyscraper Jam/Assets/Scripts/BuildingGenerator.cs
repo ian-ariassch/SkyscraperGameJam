@@ -31,7 +31,7 @@ public class BuildingGenerator : MonoBehaviour
         int i = 0;
         while(position.y + middleOfBuildingHeight/2 < lastPlatformHeight)
         {
-            position = new Vector3(startPosition.x, startPosition.y - 1 + i * middleOfBuildingHeight, 0);
+            position = new Vector3(startPosition.x, startPosition.y + i * (middleOfBuildingHeight-2f), 0);
             if(position.y < topOfBuilding.transform.position.y)
             {
                 lastMiddlePiece = Instantiate(middleOfBuilding, position, Quaternion.identity);

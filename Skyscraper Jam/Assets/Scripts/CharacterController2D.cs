@@ -52,10 +52,11 @@ public class CharacterController2D : MonoBehaviour
 				Flip();
 			}
 		}
-		if (m_Grounded && jump && m_Rigidbody2D.velocity.y == 0)
+		if (m_Grounded && jump && m_Rigidbody2D.velocity.y <= 1)
 		{
+			float extraJumpForce = 0;
 			m_Grounded = false;
-			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce + extraJumpForce));	
 		}
 	}
 
