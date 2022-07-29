@@ -6,6 +6,6 @@ PhysicsMaterial2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SlipperyPlatform
-  friction: 0.1
+  m_Name: FrictionEnemies
+  friction: 311.91
   bounciness: 0
