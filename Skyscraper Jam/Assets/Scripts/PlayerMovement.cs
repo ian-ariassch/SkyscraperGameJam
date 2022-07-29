@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public CharacterController2D controller;
+    public Animator anim;
 
     float horizontalMove = 0f;
 
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     void Start()
     {
-        
+        anim = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -22,9 +23,14 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
+
         if(Input.GetButtonDown("Jump"))
         {
             jump = true;
+        }
+        if(Input.GetButtonDown("Fire1"))
+        {
+            controller.Hit();
         }
     }
 
