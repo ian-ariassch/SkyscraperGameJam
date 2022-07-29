@@ -533,7 +533,7 @@ TextureImporter:
         x: 1125
         y: 0
         width: 375
-        height: 375
+        height: 374
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,7 +575,7 @@ TextureImporter:
         x: 1875
         y: 0
         width: 375
-        height: 375
+        height: 373
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -684,7 +684,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_idle_run_attack_16: 844945248
+      Player_idle_run_attack_22: -2098575226
       Player_idle_run_attack_25: -198397439
       Player_idle_run_attack_17: 814333983
       Player_idle_run_attack_4: -2135866920
@@ -709,7 +709,7 @@ TextureImporter:
       Player_idle_run_attack_10: -888109060
       Player_idle_run_attack_14: -1712926918
       Player_idle_run_attack_12: 1773322830
-      Player_idle_run_attack_22: -2098575226
+      Player_idle_run_attack_16: 844945248
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
